@@ -8,7 +8,7 @@ const port = 3000
 // app.get('/', (req, res) => {
 //   res.send('Hello aayush jha!')
 // })
-
+app.use(express.json())
 //Available Routes
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/notes', require('./routes/notes'))
