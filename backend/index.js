@@ -3,7 +3,7 @@ const express = require('express')
 
 connectToMongo();
 const app = express()
-const port = 3000
+const port = 6000
 
 // app.get('/', (req, res) => {
 //   res.send('Hello aayush jha!')
