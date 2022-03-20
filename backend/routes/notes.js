@@ -6,7 +6,7 @@ const { body, validationResult } = require('express-validator');
 
 
 //ROUTE 1:
-//Get All the notes using GET "api/notes/fetchallnotes"
+//Get All the notes using GET "api/notes/fetchallnotes" LOGIN REQUIRED
 router.get('/fetchallnotes', fetchuser, async (req, res) => {
     try {
         const notes = await Notes.find({ user: req.user.id });
@@ -18,13 +18,13 @@ router.get('/fetchallnotes', fetchuser, async (req, res) => {
 })
 
 //ROUTE 2:
-//add notes using POST: /api/notes/addnote. LOGIN required
+//add notes using POST: /api/notes/addnote. LOGIN REQUIRED
 router.post('/addnote', fetchuser, [
     body('title', 'Enter a valid title ').isLength({ min: 3 }),
     body('description', 'Description must be atleast 5 characters ').isLength({ min: 5 })
 ], async (req, res) => {
+    const { title, description, tag } = req.body;
     try {
-        const { title, description, tag } = req.body;
         //if there  are error , return bad request and the errors
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -44,8 +44,8 @@ router.post('/addnote', fetchuser, [
 //ROUTE 3:
 //update an existing node using PUT "/api/notes/updatenote" .LOGIN REQUIRED
 router.put('/updatenote/:id', fetchuser, async (req, res) => {
+    const { title, description, tag } = req.body;
     try {
-        const { title, description, tag } = req.body;
         //create a newNote object
         const newNote = {};
         if (title) { newNote.title = title };
@@ -77,8 +77,6 @@ router.put('/updatenote/:id', fetchuser, async (req, res) => {
 //delete an existing node using DELETE "/api/notes/delelenote" .LOGIN REQUIRED
 router.delete('/deletenote/:id', fetchuser, async (req, res) => {
     try {
-        const { title, description, tag } = req.body;
-
         //find the note to be deleted and Delete it
         let note = await Notes.findById(req.params.id);
         if (!note) {
@@ -100,4 +98,5 @@ router.delete('/deletenote/:id', fetchuser, async (req, res) => {
     }
 
 })
+
 module.exports = router
