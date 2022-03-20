@@ -1,10 +1,29 @@
 import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
 
 function App() {
   return (
-    <div className="App">
-    <h1>This is iNotebook</h1>
-    </div>
+    <>
+    <Router>
+      <Navbar />
+      <Switch>
+          <Route exactpath="/">
+            <Home />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+        </Switch>
+        </Router>
+    </>
   );
 }
 
