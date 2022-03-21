@@ -16,9 +16,72 @@ const notesInitial = [
       "_id": "623892665af020e9828ba9e1",
       "user": "6235d4f545e3e9ab44d80576",
       "title": "The Great Dictator",
-      "description": "Greed has poisoned men’s souls, has barricaded the world with hate, has goose-stepped us into misery and bloodshed. We have developed speed, but we have shut ourselves in. Machinery that gives abundance has left us in want. Our knowledge has made us cynical. Our cleverness, hard and unkind. We think too much and feel too little. More than machinery we need humanity. More than cleverness we need kindness and gentleness. Without these qualities, life will be violent and all will be lost…",
+      "description": " More than machinery we need humanity. More than cleverness we need kindness and gentleness. Without these qualities, life will be violent and all will be lost…",
       "tag": "quotes",
       "Date": "2022-03-21T14:57:42.679Z",
+      "__v": 0
+    },
+    {
+      "_id": "6238ab22cf29807489490c48",
+      "user": "6235d4f545e3e9ab44d80576",
+      "title": "Margaret Mead",
+      "description": "Always remember that you are absolutely unique. Just like everyone else.",
+      "tag": "quotes",
+      "Date": "2022-03-21T16:43:14.109Z",
+      "__v": 0
+    },
+    {
+      "_id": "6238ab4ecf29807489490c4a",
+      "user": "6235d4f545e3e9ab44d80576",
+      "title": "Benjamin Franklin",
+      "description": "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+      "tag": "quotes",
+      "Date": "2022-03-21T16:43:58.199Z",
+      "__v": 0
+    },
+    {
+      "_id": "6238ab73cf29807489490c4c",
+      "user": "6235d4f545e3e9ab44d80576",
+      "title": "Aristotle",
+      "description": "It is during our darkest moments that we must focus to see the light.",
+      "tag": "quotes",
+      "Date": "2022-03-21T16:44:35.614Z",
+      "__v": 0
+    },
+    {
+      "_id": "6238ab92cf29807489490c4e",
+      "user": "6235d4f545e3e9ab44d80576",
+      "title": "Helen Keller",
+      "description": "Life is either a daring adventure or nothing at all. ",
+      "tag": "quotes",
+      "Date": "2022-03-21T16:45:06.327Z",
+      "__v": 0
+    },
+    {
+      "_id": "6238abc7cf29807489490c51",
+      "user": "6235d4f545e3e9ab44d80576",
+      "title": "Thomas A. Edison",
+      "description": "Many of life's failures are people who did not realize how close they were to success when they gave up. ",
+      "tag": "quotes",
+      "Date": "2022-03-21T16:45:59.744Z",
+      "__v": 0
+    },
+    {
+      "_id": "6238abf4cf29807489490c53",
+      "user": "6235d4f545e3e9ab44d80576",
+      "title": "Maya Angelou",
+      "description": "You will face many defeats in life, but never let yourself be defeated.",
+      "tag": "quotes",
+      "Date": "2022-03-21T16:46:44.948Z",
+      "__v": 0
+    },
+    {
+      "_id": "6238ac0ccf29807489490c55",
+      "user": "6235d4f545e3e9ab44d80576",
+      "title": "Oscar Wilde",
+      "description": "Life is never fair, and perhaps it is a good thing for most of us that it is not.",
+      "tag": "quotes",
+      "Date": "2022-03-21T16:47:08.214Z",
       "__v": 0
     }
   ]
