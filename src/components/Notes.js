@@ -12,7 +12,7 @@ const Notes = () => {
             <h2>Your Notes</h2>
             {/* using destructuring method of js to obtain 'notes' from context */}
             {notes.map((note) => {
-                return <Noteitem note={note}/> 
+                return <Noteitem key={note._id} note={note}/> 
             })}
         </div>
     )
