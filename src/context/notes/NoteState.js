@@ -1,8 +1,8 @@
 import NoteContext from "./noteContext";
 import { useState } from "react";
-const NoteState = (props)=>{
+const NoteState = (props) => {
 
-const notesInitial = [
+  const notesInitial = [
     {
       "_id": "6236133eb7b44a2d4d26e225",
       "user": "6235d4f545e3e9ab44d80576",
@@ -16,7 +16,7 @@ const notesInitial = [
       "_id": "623892665af020e9828ba9e1",
       "user": "6235d4f545e3e9ab44d80576",
       "title": "The Great Dictator",
-      "description": " More than machinery we need humanity. More than cleverness we need kindness and gentleness. Without these qualities, life will be violent and all will be lost…",
+      "description": " More than machinery we need humanity.",
       "tag": "quotes",
       "Date": "2022-03-21T14:57:42.679Z",
       "__v": 0
@@ -87,13 +87,37 @@ const notesInitial = [
   ]
 
   const [notes, setNotes] = useState(notesInitial)
-    return (
-        //using Provider, passing state  to all the components
-        //The Provider component accepts a value prop to be passed to consuming components that are descendants of this Provider. Here, the NoteContext provider contains all the children components, which means that we have to just wrap the application(app.js) inside <NoteState></NoteState>, in order to use the above-created state in every Component and Subcomponents.
-        <NoteContext.Provider value={{notes, setNotes}}>
-            {props.children}
-        </NoteContext.Provider>
-    )
+
+  //add a note
+  const addNote = (title, description, tag) => {
+   //TODO: API CALL
+    const note = {
+      "_id": "6238ac0ccf29807489490c56",
+      "user": "6235d4f545e3e9ab44d80576",
+      "title": title,
+      "description": description,
+      "tag": tag,
+      "Date": "2022-03-21T16:47:08.214Z",
+      "__v": 0
+    };
+    setNotes(notes.concat(note))
+  }
+  //delete a note
+  const deleteNote = () => {
+
+  }
+  //update a note
+  const updateNote = () => {
+
+  }
+
+  return (
+    //using Provider, passing state  to all the components
+    //The Provider component accepts a value prop to be passed to consuming components that are descendants of this Provider. Here, the NoteContext provider contains all the children components, which means that we have to just wrap the application(app.js) inside <NoteState></NoteState>, in order to use the above-created state in every Component and Subcomponents.
+    <NoteContext.Provider value={{ notes, addNote, deleteNote, updateNote }}>
+      {props.children}
+    </NoteContext.Provider>
+  )
 }
 
 export default NoteState;
